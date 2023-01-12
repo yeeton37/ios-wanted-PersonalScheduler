@@ -6,10 +6,10 @@
 //
 import Foundation
 
-struct Schedule {
-    let id: UUID
+struct Schedule: Codable {
+    let email: String
     let title: String
     let body: String
     let startDate: String
-    let endDate: String
+    let endDate: String?
 }

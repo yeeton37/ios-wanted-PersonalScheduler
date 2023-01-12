@@ -38,8 +38,8 @@ class KakaoLoginViewController: UIViewController {
                                 Auth.auth().signIn(withEmail: (kuser?.kakaoAccount?.email)!, password: "\(String(describing: kuser?.id))", completion: nil)
                             } else {
                                 print("파이어베이스 사용자 생성")
-                                let vc = SchedularViewController()
-                                self.show(vc, sender: nil)
+                                let vc = MainViewController()
+                                self.navigationController?.pushViewController(vc, animated: true)
                             }
                         }
                     }
