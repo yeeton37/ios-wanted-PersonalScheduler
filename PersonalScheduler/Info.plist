@@ -2,38 +2,40 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb1236544516924775</string>
-      </array>
-      </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>1236544516924775</string>
-    <key>FacebookClientToken</key>
-    <string>c12ce5706a06a62e62168add8d70546a</string>
-    <key>FacebookDisplayName</key>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1236544516924775</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao2b313b9cf5e422b415c8e03763f289da</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1236544516924775</string>
+	<key>FacebookClientToken</key>
+	<string>c12ce5706a06a62e62168add8d70546a</string>
+	<key>FacebookDisplayName</key>
     <string>schedularApp</string>
-    
-    
     <key>LSApplicationQueriesSchemes</key>
     <array>
-      <string>fbapi</string>
-      <string>fb-messenger-share-api</string>
+        <string>kakaokompassauth</string>
+        <string>kakaolink</string>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
     </array>
-    
-    
-    
-    
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
 		<key>UISceneConfigurations</key>
 		<dict>
 			<key>UIWindowSceneSessionRoleApplication</key>
@@ -43,7 +45,6 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					
 				</dict>
 			</array>
 		</dict>
