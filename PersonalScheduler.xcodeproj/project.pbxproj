@@ -55,6 +55,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423E6C76296FF79B00236FE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
+				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		423E6C77296FF7A300236FE4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C7B296FF81800236FE4 /* Model */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		423E6C78296FF7BC00236FE4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4283EE71296C683400B53654 /* FacebookLoginViewController.swift */,
+				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
+				4283EE6A296C527800B53654 /* CreateEmailViewController.swift */,
+				423E6C73296FEFC400236FE4 /* SchedularViewController.swift */,
+				63AAAB052967EA2600775EC3 /* LoginViewController.swift */,
+				4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		423E6C79296FF7E900236FE4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C7A296FF7F500236FE4 /* App */,
+				423E6C77296FF7A300236FE4 /* Repositories */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		423E6C7A296FF7F500236FE4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				63AAAB032967EA2600775EC3 /* SceneDelegate.swift */,
+				63AAAB012967EA2600775EC3 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		423E6C7B296FF81800236FE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		63AAAAF52967EA2600775EC3 = {
 			isa = PBXGroup;
 			children = (
@@ -77,16 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				4283EE70296C675B00B53654 /* PersonalScheduler.entitlements */,
-				63AAAB012967EA2600775EC3 /* AppDelegate.swift */,
-				63AAAB032967EA2600775EC3 /* SceneDelegate.swift */,
-				63AAAB052967EA2600775EC3 /* LoginViewController.swift */,
-				4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */,
-				423E6C73296FEFC400236FE4 /* SchedularViewController.swift */,
-				4283EE6A296C527800B53654 /* CreateEmailViewController.swift */,
-				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
-				4283EE71296C683400B53654 /* FacebookLoginViewController.swift */,
-				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
-				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
+				423E6C76296FF79B00236FE4 /* Resources */,
+				423E6C79296FF7E900236FE4 /* Sources */,
+				423E6C78296FF7BC00236FE4 /* Presentation */,
 				63AAAB0F2967EA2700775EC3 /* Info.plist */,
 				4283EE6C296C53B400B53654 /* GoogleService-Info.plist */,
 			);
