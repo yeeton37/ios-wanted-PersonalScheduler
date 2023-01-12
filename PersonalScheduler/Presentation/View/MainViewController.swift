@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Combine
 
 class MainViewController: UIViewController {
     private let topVerticalStackView: UIStackView = {
@@ -35,6 +36,14 @@ class MainViewController: UIViewController {
         return button
     }()
 
+    private let nextButton: UIButton = {
+        let button = UIButton()
+        button.tintColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("스케줄로 넘어가기", for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +54,7 @@ class MainViewController: UIViewController {
         greetingLabel.text = "환영합니다 \(email)님!"
         
         logoutButton.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
     }
     
     func setup() {
@@ -52,12 +62,14 @@ class MainViewController: UIViewController {
         
         topVerticalStackView.addArrangedSubview(greetingLabel)
         topVerticalStackView.addArrangedSubview(logoutButton)
+        topVerticalStackView.addArrangedSubview(nextButton)
     }
     
     func setAutolayout() {
         NSLayoutConstraint.activate([
             topVerticalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            topVerticalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            topVerticalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
         ])
     }
     
@@ -70,5 +82,17 @@ class MainViewController: UIViewController {
         } catch let signoutError as NSError {
             print(signoutError.localizedDescription)
         }
+    }
+    
+    @objc func didTapNextButton() {
+        guard let user = Auth.auth().currentUser,
+              let userEmail = user.email else {
+            return
+        }
+        
+        let schedularVC = SchedularViewController(viewModel: ScheduleViewModel(email: userEmail))
+        
+        self.navigationController?.pushViewController(schedularVC, animated: true)
+        
     }
 }
