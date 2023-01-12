@@ -11,4 +11,7 @@ target 'PersonalScheduler' do
   pod 'FacebookLogin'
   pod 'FacebookCore'
   pod 'FacebookShare'
+  pod 'KakaoSDKCommon'
+  pod 'KakaoSDKAuth'
+  pod 'KakaoSDKUser'
 end

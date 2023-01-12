@@ -57,11 +57,10 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    
-    private let googleLoginButton: UIButton = {
-       let button = UIButton()
-        button.setTitle("Google로 계속하기", for: .normal)
-        button.setImage(UIImage(named: "logo_google.png"), for: .normal)
+    private let kakaoLoginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(" Kakao로 계속하기 ", for: .normal)
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
@@ -71,8 +70,8 @@ class LoginViewController: UIViewController {
     
     private let appleLoginButton: UIButton = {
        let button = UIButton()
-        button.setTitle(" Apple로 계속하기 ", for: .normal)
-        button.setImage(UIImage(named: "logo_apple.png"), for: .normal)
+        button.setTitle(" Facebook으로 계속하기 ", for: .normal)
+//        button.setImage(UIImage(named: "logo_facebook.png"), for: .normal)
         button.semanticContentAttribute = .forceLeftToRight
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderWidth = 1
@@ -87,7 +86,7 @@ class LoginViewController: UIViewController {
         setAutolayout()
         
         emailLoginButton.addTarget(self, action: #selector(didTapEmailLoginButton), for: .touchUpInside)
-        googleLoginButton.addTarget(self, action: #selector(didTapGoogleLoginButton), for: .touchUpInside)
+        kakaoLoginButton.addTarget(self, action: #selector(didTapKakaoLoginButton), for: .touchUpInside)
         appleLoginButton.addTarget(self, action: #selector(didTapAppleLoginButton), for: .touchUpInside)
     }
     
@@ -96,8 +95,9 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(emailVC, animated: true)
     }
     
-    @objc func didTapGoogleLoginButton() {
-        
+    @objc func didTapKakaoLoginButton() {
+        let kakaoVC = KakaoLoginViewController()
+        navigationController?.pushViewController(kakaoVC, animated: true)
     }
     
     @objc func didTapAppleLoginButton() {
@@ -114,7 +114,7 @@ class LoginViewController: UIViewController {
         topVerticalStackView.addArrangedSubview(introduceLabel)
         
         bottomVerticalStackView.addArrangedSubview(emailLoginButton)
-        bottomVerticalStackView.addArrangedSubview(googleLoginButton)
+        bottomVerticalStackView.addArrangedSubview(kakaoLoginButton)
         bottomVerticalStackView.addArrangedSubview(appleLoginButton)
     }
     

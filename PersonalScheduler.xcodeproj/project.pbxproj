@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */; };
 		4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6A296C527800B53654 /* CreateEmailViewController.swift */; };
 		4283EE6D296C53B400B53654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283EE6C296C53B400B53654 /* GoogleService-Info.plist */; };
 		4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6E296C5A5900B53654 /* MainViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		39B99951475C2443C8CE01EC /* Pods_PersonalScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
 		4283EE6A296C527800B53654 /* CreateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmailViewController.swift; sourceTree = "<group>"; };
 		4283EE6C296C53B400B53654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4283EE6E296C5A5900B53654 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				63AAAB012967EA2600775EC3 /* AppDelegate.swift */,
 				63AAAB032967EA2600775EC3 /* SceneDelegate.swift */,
 				63AAAB052967EA2600775EC3 /* LoginViewController.swift */,
+				4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */,
 				4283EE6A296C527800B53654 /* CreateEmailViewController.swift */,
 				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
 				4283EE71296C683400B53654 /* FacebookLoginViewController.swift */,
@@ -224,6 +227,7 @@
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
 				4283EE72296C683400B53654 /* FacebookLoginViewController.swift in Sources */,
+				4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */,
 				63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */,
 				4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */,
 				4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */,
@@ -367,6 +371,7 @@
 				CODE_SIGN_ENTITLEMENTS = PersonalScheduler/PersonalScheduler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6T62MU29CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalScheduler/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -397,6 +402,7 @@
 				CODE_SIGN_ENTITLEMENTS = PersonalScheduler/PersonalScheduler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6T62MU29CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalScheduler/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
