@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */; };
 		423E6C74296FEFC400236FE4 /* SchedularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C73296FEFC400236FE4 /* SchedularViewController.swift */; };
+		423E6C7D296FF87100236FE4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C7C296FF87100236FE4 /* Schedule.swift */; };
 		4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6A296C527800B53654 /* CreateEmailViewController.swift */; };
 		4283EE6D296C53B400B53654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283EE6C296C53B400B53654 /* GoogleService-Info.plist */; };
 		4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6E296C5A5900B53654 /* MainViewController.swift */; };
@@ -26,6 +27,7 @@
 		39B99951475C2443C8CE01EC /* Pods_PersonalScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
 		423E6C73296FEFC400236FE4 /* SchedularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedularViewController.swift; sourceTree = "<group>"; };
+		423E6C7C296FF87100236FE4 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		4283EE6A296C527800B53654 /* CreateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmailViewController.swift; sourceTree = "<group>"; };
 		4283EE6C296C53B400B53654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4283EE6E296C5A5900B53654 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		423E6C7B296FF81800236FE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				423E6C7C296FF87100236FE4 /* Schedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
 				423E6C74296FEFC400236FE4 /* SchedularViewController.swift in Sources */,
+				423E6C7D296FF87100236FE4 /* Schedule.swift in Sources */,
 				4283EE72296C683400B53654 /* FacebookLoginViewController.swift in Sources */,
 				4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */,
 				63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */,
