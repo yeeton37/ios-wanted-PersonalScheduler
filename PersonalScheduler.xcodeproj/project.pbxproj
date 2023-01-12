@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */; };
+		423E6C74296FEFC400236FE4 /* SchedularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C73296FEFC400236FE4 /* SchedularViewController.swift */; };
+		423E6C7D296FF87100236FE4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C7C296FF87100236FE4 /* Schedule.swift */; };
+		423E6C8129700F5200236FE4 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C8029700F5200236FE4 /* ScheduleViewModel.swift */; };
+		423E6C832970101A00236FE4 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C822970101A00236FE4 /* ScheduleCell.swift */; };
+		423E6C85297017EB00236FE4 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C84297017EB00236FE4 /* FirebaseManager.swift */; };
+		423E6C88297018F800236FE4 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C87297018F800236FE4 /* Encodable+Extension.swift */; };
 		4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6A296C527800B53654 /* CreateEmailViewController.swift */; };
 		4283EE6D296C53B400B53654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283EE6C296C53B400B53654 /* GoogleService-Info.plist */; };
 		4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6E296C5A5900B53654 /* MainViewController.swift */; };
@@ -24,6 +30,12 @@
 /* Begin PBXFileReference section */
 		39B99951475C2443C8CE01EC /* Pods_PersonalScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
+		423E6C73296FEFC400236FE4 /* SchedularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedularViewController.swift; sourceTree = "<group>"; };
+		423E6C7C296FF87100236FE4 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		423E6C8029700F5200236FE4 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		423E6C822970101A00236FE4 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		423E6C84297017EB00236FE4 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		423E6C87297018F800236FE4 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		4283EE6A296C527800B53654 /* CreateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmailViewController.swift; sourceTree = "<group>"; };
 		4283EE6C296C53B400B53654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4283EE6E296C5A5900B53654 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +65,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423E6C76296FF79B00236FE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
+				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		423E6C77296FF7A300236FE4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C7B296FF81800236FE4 /* Model */,
+				423E6C84297017EB00236FE4 /* FirebaseManager.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		423E6C78296FF7BC00236FE4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C7E29700F2500236FE4 /* View */,
+				423E6C7F29700F3B00236FE4 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		423E6C79296FF7E900236FE4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C86297018E800236FE4 /* Extensions */,
+				423E6C7A296FF7F500236FE4 /* App */,
+				423E6C77296FF7A300236FE4 /* Repositories */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		423E6C7A296FF7F500236FE4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				63AAAB032967EA2600775EC3 /* SceneDelegate.swift */,
+				63AAAB012967EA2600775EC3 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		423E6C7B296FF81800236FE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C7C296FF87100236FE4 /* Schedule.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		423E6C7E29700F2500236FE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63AAAB052967EA2600775EC3 /* LoginViewController.swift */,
+				4283EE6A296C527800B53654 /* CreateEmailViewController.swift */,
+				4283EE71296C683400B53654 /* FacebookLoginViewController.swift */,
+				4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */,
+				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
+				423E6C73296FEFC400236FE4 /* SchedularViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		423E6C7F29700F3B00236FE4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C8029700F5200236FE4 /* ScheduleViewModel.swift */,
+				423E6C822970101A00236FE4 /* ScheduleCell.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		423E6C86297018E800236FE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				423E6C87297018F800236FE4 /* Encodable+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		63AAAAF52967EA2600775EC3 = {
 			isa = PBXGroup;
 			children = (
@@ -75,15 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				4283EE70296C675B00B53654 /* PersonalScheduler.entitlements */,
-				63AAAB012967EA2600775EC3 /* AppDelegate.swift */,
-				63AAAB032967EA2600775EC3 /* SceneDelegate.swift */,
-				63AAAB052967EA2600775EC3 /* LoginViewController.swift */,
-				4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */,
-				4283EE6A296C527800B53654 /* CreateEmailViewController.swift */,
-				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
-				4283EE71296C683400B53654 /* FacebookLoginViewController.swift */,
-				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
-				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
+				423E6C76296FF79B00236FE4 /* Resources */,
+				423E6C79296FF7E900236FE4 /* Sources */,
+				423E6C78296FF7BC00236FE4 /* Presentation */,
 				63AAAB0F2967EA2700775EC3 /* Info.plist */,
 				4283EE6C296C53B400B53654 /* GoogleService-Info.plist */,
 			);
@@ -224,12 +314,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423E6C85297017EB00236FE4 /* FirebaseManager.swift in Sources */,
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
+				423E6C74296FEFC400236FE4 /* SchedularViewController.swift in Sources */,
+				423E6C88297018F800236FE4 /* Encodable+Extension.swift in Sources */,
+				423E6C8129700F5200236FE4 /* ScheduleViewModel.swift in Sources */,
+				423E6C7D296FF87100236FE4 /* Schedule.swift in Sources */,
 				4283EE72296C683400B53654 /* FacebookLoginViewController.swift in Sources */,
 				4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */,
 				63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */,
 				4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */,
+				423E6C832970101A00236FE4 /* ScheduleCell.swift in Sources */,
 				4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

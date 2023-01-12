@@ -14,4 +14,6 @@ target 'PersonalScheduler' do
   pod 'KakaoSDKCommon'
   pod 'KakaoSDKAuth'
   pod 'KakaoSDKUser'
+  pod 'FirebaseFirestoreSwift'
+  pod 'FirebaseFirestore'
 end
