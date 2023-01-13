@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key> Fonts provided by application</key>
+	<array>
+		<string>NotoSansKR-Medium.otf</string>
+		<string>NotoSansKR-Regular.otf</string>
+		<string>NotoSansKR-Bold.otf</string>
+		<string>NotoSansKR-Light.otf</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -24,18 +31,18 @@
 	<key>FacebookClientToken</key>
 	<string>c12ce5706a06a62e62168add8d70546a</string>
 	<key>FacebookDisplayName</key>
-    <string>schedularApp</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>kakaokompassauth</string>
-        <string>kakaolink</string>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-    </array>
-    <key>UIApplicationSceneManifest</key>
-    <dict>
-        <key>UIApplicationSupportsMultipleScenes</key>
-        <false/>
+	<string>schedularApp</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakaokompassauth</string>
+		<string>kakaolink</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
 		<key>UISceneConfigurations</key>
 		<dict>
 			<key>UIWindowSceneSessionRoleApplication</key>
@@ -49,5 +56,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>item2</key>
+	<string>NotoSansKR-Medium.otf</string>
 </dict>
 </plist>
