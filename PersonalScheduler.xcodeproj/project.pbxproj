@@ -156,6 +156,7 @@
 				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
 				423E6C73296FEFC400236FE4 /* SchedularViewController.swift */,
 				423E6C8B2970619C00236FE4 /* WritingScheduleViewController.swift */,
+				423E6C822970101A00236FE4 /* ScheduleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				423E6C8029700F5200236FE4 /* ScheduleViewModel.swift */,
-				423E6C822970101A00236FE4 /* ScheduleCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
