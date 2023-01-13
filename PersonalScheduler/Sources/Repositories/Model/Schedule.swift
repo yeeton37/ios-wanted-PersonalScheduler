@@ -8,6 +8,7 @@ import Foundation
 
 struct Schedule: Codable {
     let email: String
+    let id: String
     let title: String
     let body: String
     let startDate: String

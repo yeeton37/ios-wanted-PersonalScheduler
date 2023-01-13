@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
         stackview.axis = .vertical
         stackview.distribution = .equalSpacing
         stackview.alignment = .center
-        stackview.spacing = 20
+        stackview.spacing = 10
         stackview.translatesAutoresizingMaskIntoConstraints = false
         return stackview
     }()
@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         let imageview = UIImageView()
         imageview.image = UIImage(systemName: "book.fill")
         imageview.translatesAutoresizingMaskIntoConstraints = false
-        imageview.tintColor = .brown
+        imageview.tintColor = .Red_60
         imageview.widthAnchor.constraint(equalToConstant: 60).isActive = true
         imageview.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return imageview
@@ -30,9 +30,11 @@ class LoginViewController: UIViewController {
     
     private let introduceLabel: UILabel = {
         let label = UILabel()
-        label.text = "다이어리에 오신 것을 환영합니다."
+        label.text = "Diary Schedular"
+        label.font = UIFont(name: "NotoSansKannada-Bold", size: 30)
         label.numberOfLines = 2
-        label.textColor = .white
+        label.textAlignment = .natural
+        label.textColor = .Red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,33 +51,37 @@ class LoginViewController: UIViewController {
     
     private let emailLoginButton: UIButton = {
        let button = UIButton()
-        button.setTitle(" 이메일로 계속하기 ", for: .normal)
+        button.setTitle("email/password login", for: .normal)
+        button.titleLabel?.font = UIFont(name: "NotoSansKannada-Regular", size: 20)
+        button.setTitleColor(.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderColor = UIColor.Red_60.cgColor
         button.layer.cornerRadius = 15
         return button
     }()
     
     private let kakaoLoginButton: UIButton = {
         let button = UIButton()
-        button.setTitle(" Kakao로 계속하기 ", for: .normal)
-        
+        button.setTitle("kakao login", for: .normal)
+        button.titleLabel?.font = UIFont(name: "NotoSansKannada-Regular", size: 20)
+        button.setTitleColor(.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderColor = UIColor.Red_60.cgColor
         button.layer.cornerRadius = 15
         return button
     }()
     
     private let appleLoginButton: UIButton = {
        let button = UIButton()
-        button.setTitle(" Facebook으로 계속하기 ", for: .normal)
-//        button.setImage(UIImage(named: "logo_facebook.png"), for: .normal)
+        button.setTitle(" facebook login ", for: .normal)
+        button.titleLabel?.font = UIFont(name: "NotoSansKannada-Regular", size: 20)
+        button.setTitleColor(.black, for: .normal)
         button.semanticContentAttribute = .forceLeftToRight
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderColor = UIColor.Red_60.cgColor
         button.layer.cornerRadius = 15
         return button
     }()
@@ -106,7 +112,7 @@ class LoginViewController: UIViewController {
     }
     
     func setup() {
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor.Beige
         view.addSubview(topVerticalStackView)
         view.addSubview(bottomVerticalStackView)
         
@@ -121,13 +127,13 @@ class LoginViewController: UIViewController {
     func setAutolayout() {
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            topVerticalStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            topVerticalStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 140),
             topVerticalStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
             topVerticalStackView.heightAnchor.constraint(equalToConstant: 110),
             
-            bottomVerticalStackView.topAnchor.constraint(equalTo: topVerticalStackView.bottomAnchor, constant: 60),
-            bottomVerticalStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            bottomVerticalStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5)
+            bottomVerticalStackView.topAnchor.constraint(equalTo: topVerticalStackView.bottomAnchor, constant: 200),
+            bottomVerticalStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            bottomVerticalStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
     }
 }

@@ -9,10 +9,41 @@ import UIKit
 import FirebaseAuth
 
 class CreateEmailViewController: UIViewController {
-    private let topVerticalStackView: UIStackView = {
+    private let logoVerticalStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.axis = .vertical
         stackview.distribution = .equalSpacing
+        stackview.alignment = .center
+        stackview.spacing = 10
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        return stackview
+    }()
+    
+    private let imageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.image = UIImage(systemName: "book.fill")
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        imageview.tintColor = .Red_60
+        imageview.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        imageview.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        return imageview
+    }()
+    
+    private let introduceLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Diary Schedular."
+        label.font = UIFont(name: "NotoSansKannada-Bold", size: 30)
+        label.numberOfLines = 2
+        label.textAlignment = .natural
+        label.textColor = .Red
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let topVerticalStackView: UIStackView = {
+        let stackview = UIStackView()
+        stackview.axis = .vertical
+        stackview.distribution = .fillEqually
         stackview.alignment = .fill
         stackview.spacing = 10
         stackview.translatesAutoresizingMaskIntoConstraints = false
@@ -22,24 +53,33 @@ class CreateEmailViewController: UIViewController {
     private let emailTextField: UITextField = {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.text = "이메일을 입력해주세요."
-        textfield.backgroundColor = .white
+        textfield.layer.borderWidth = 1
+        textfield.layer.borderColor = UIColor.Red_60.cgColor
+        textfield.text = "   email"
+        textfield.font = UIFont(name: "NotoSansKannada-Regular", size: 15)
+        textfield.layer.cornerRadius = 8
+        textfield.backgroundColor = .Beige
         return textfield
     }()
     
     private let passwordTextField: UITextField = {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.text = "비밀번호를 입력해주세요."
-        textfield.backgroundColor = .white
+        textfield.text = "   password"
+        textfield.font = UIFont(name: "NotoSansKannada-Regular", size: 15)
+        textfield.layer.borderWidth = 1
+        textfield.layer.cornerRadius = 8
+        textfield.layer.borderColor = UIColor.Red_60.cgColor
+        textfield.backgroundColor = .Beige
         return textfield
     }()
     
     private let saveAccountButton: UIButton = {
        let button = UIButton()
         button.setTitle("생성하기", for: .normal)
-        button.tintColor = .white
+        button.backgroundColor = .Red_60
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont(name: "NotoSansKannada-Regular", size: 15)
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 15
@@ -82,18 +122,32 @@ class CreateEmailViewController: UIViewController {
     }
     
     func setup() {
+        view.backgroundColor = .Beige
         view.addSubview(topVerticalStackView)
+        view.addSubview(logoVerticalStackView)
+        
         topVerticalStackView.addArrangedSubview(emailTextField)
         topVerticalStackView.addArrangedSubview(passwordTextField)
         topVerticalStackView.addArrangedSubview(saveAccountButton)
+        
+        logoVerticalStackView.addArrangedSubview(imageView)
+        logoVerticalStackView.addArrangedSubview(introduceLabel)
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backButton.tintColor = .Red
+        self.navigationItem.backBarButtonItem = backButton
     }
     
     func setAutolayout() {
         NSLayoutConstraint.activate([
-            topVerticalStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-            topVerticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            topVerticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            topVerticalStackView.heightAnchor.constraint(equalToConstant: 150)
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoVerticalStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 140),
+            logoVerticalStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            logoVerticalStackView.heightAnchor.constraint(equalToConstant: 110),
+            
+            topVerticalStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 280),
+            topVerticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            topVerticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
     }
     

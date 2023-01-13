@@ -31,18 +31,11 @@ class SchedularViewController: UIViewController {
         super.viewDidLoad()
 
         bind()
-        self.view.addSubview(tableView)
-        view.backgroundColor = .black
+        setup()
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ScheduleCell.self, forCellReuseIdentifier: "ScheduleCell")
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
-        ])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,15 +53,38 @@ class SchedularViewController: UIViewController {
             }
             .store(in: &cancelable)
     }
+    
+    @objc func didTapAddButton() {
+        let writingVC = WritingScheduleViewController()
+        
+        navigationController?.pushViewController(writingVC, animated: true)
+    }
+    
+    func setup() {
+        self.view.addSubview(tableView)
+        tableView.backgroundColor = .Beige
+        view.backgroundColor = .Beige
+        tableView.separatorStyle = .singleLine
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 30)
+        tableView.separatorInsetReference = .fromAutomaticInsets
+        tableView.separatorColor = .Red_60
+        
+        let rightButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: #selector(didTapAddButton))
+        rightButton.tintColor = .Red
+        navigationItem.rightBarButtonItem = rightButton
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
+        ])
+    }
 }
 
 extension SchedularViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let model = viewModel.model else {
-            return 3
-        }
-        
-        return model.count
+        return viewModel.model.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,14 +92,21 @@ extension SchedularViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        guard let model = viewModel.model else { return UITableViewCell() }
-        cell.transferData(schedule: model[indexPath.row])
+        cell.transferData(schedule: viewModel.model[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let writingVC = WritingScheduleViewController()
         
-        self.navigationController?.pushViewController(writingVC, animated: true)
+        navigationController?.pushViewController(writingVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+            self.viewModel.deleteButtonDidTap(indexPath: indexPath)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete])
     }
 }

@@ -21,6 +21,17 @@
 		4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6E296C5A5900B53654 /* MainViewController.swift */; };
 		4283EE72296C683400B53654 /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE71296C683400B53654 /* FacebookLoginViewController.swift */; };
 		4283EE74296C6E1D00B53654 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4283EE73296C6E1D00B53654 /* Podfile */; };
+		42FD7C5B29712D4200DC507C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD7C5A29712D4200DC507C /* UIColor+Extension.swift */; };
+		42FD7C642971303700DC507C /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C5D2971303700DC507C /* NotoSansKR-Light.otf */; };
+		42FD7C652971303700DC507C /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C5E2971303700DC507C /* NotoSansKR-Bold.otf */; };
+		42FD7C662971303700DC507C /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C5F2971303700DC507C /* NotoSansKR-Thin.otf */; };
+		42FD7C672971303700DC507C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C602971303700DC507C /* OFL.txt */; };
+		42FD7C682971303700DC507C /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C612971303700DC507C /* NotoSansKR-Black.otf */; };
+		42FD7C692971303700DC507C /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C622971303700DC507C /* NotoSansKR-Medium.otf */; };
+		42FD7C6A2971303700DC507C /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FD7C632971303700DC507C /* NotoSansKR-Regular.otf */; };
+		42FD7C6C2971313500DC507C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD7C6B2971313500DC507C /* UIFont+Extension.swift */; };
+		42FD7C6E297147D700DC507C /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD7C6D297147D700DC507C /* UIStackView+Extension.swift */; };
+		42FD7C7029716A9E00DC507C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD7C6F29716A9E00DC507C /* Date+Extension.swift */; };
 		63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB012967EA2600775EC3 /* AppDelegate.swift */; };
 		63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB032967EA2600775EC3 /* SceneDelegate.swift */; };
 		63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB052967EA2600775EC3 /* LoginViewController.swift */; };
@@ -46,6 +57,17 @@
 		4283EE70296C675B00B53654 /* PersonalScheduler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PersonalScheduler.entitlements; sourceTree = "<group>"; };
 		4283EE71296C683400B53654 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 		4283EE73296C6E1D00B53654 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Podfile; sourceTree = "<group>"; };
+		42FD7C5A29712D4200DC507C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		42FD7C5D2971303700DC507C /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		42FD7C5E2971303700DC507C /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		42FD7C5F2971303700DC507C /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		42FD7C602971303700DC507C /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		42FD7C612971303700DC507C /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		42FD7C622971303700DC507C /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		42FD7C632971303700DC507C /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		42FD7C6B2971313500DC507C /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		42FD7C6D297147D700DC507C /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		42FD7C6F29716A9E00DC507C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		63AAAAFE2967EA2600775EC3 /* PersonalScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AAAB012967EA2600775EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63AAAB032967EA2600775EC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,13 +173,32 @@
 			isa = PBXGroup;
 			children = (
 				423E6C87297018F800236FE4 /* Encodable+Extension.swift */,
+				42FD7C5A29712D4200DC507C /* UIColor+Extension.swift */,
+				42FD7C6B2971313500DC507C /* UIFont+Extension.swift */,
+				42FD7C6D297147D700DC507C /* UIStackView+Extension.swift */,
+				42FD7C6F29716A9E00DC507C /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		42FD7C5C2971303700DC507C /* Noto_Sans_KR */ = {
+			isa = PBXGroup;
+			children = (
+				42FD7C5D2971303700DC507C /* NotoSansKR-Light.otf */,
+				42FD7C5E2971303700DC507C /* NotoSansKR-Bold.otf */,
+				42FD7C5F2971303700DC507C /* NotoSansKR-Thin.otf */,
+				42FD7C602971303700DC507C /* OFL.txt */,
+				42FD7C612971303700DC507C /* NotoSansKR-Black.otf */,
+				42FD7C622971303700DC507C /* NotoSansKR-Medium.otf */,
+				42FD7C632971303700DC507C /* NotoSansKR-Regular.otf */,
+			);
+			path = Noto_Sans_KR;
 			sourceTree = "<group>";
 		};
 		63AAAAF52967EA2600775EC3 = {
 			isa = PBXGroup;
 			children = (
+				42FD7C5C2971303700DC507C /* Noto_Sans_KR */,
 				63AAAB002967EA2600775EC3 /* PersonalScheduler */,
 				63AAAAFF2967EA2600775EC3 /* Products */,
 				C3436C70153A826103CE22C7 /* Pods */,
@@ -264,9 +305,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FD7C6A2971303700DC507C /* NotoSansKR-Regular.otf in Resources */,
+				42FD7C682971303700DC507C /* NotoSansKR-Black.otf in Resources */,
 				63AAAB0E2967EA2700775EC3 /* LaunchScreen.storyboard in Resources */,
+				42FD7C692971303700DC507C /* NotoSansKR-Medium.otf in Resources */,
+				42FD7C662971303700DC507C /* NotoSansKR-Thin.otf in Resources */,
+				42FD7C642971303700DC507C /* NotoSansKR-Light.otf in Resources */,
 				63AAAB0B2967EA2700775EC3 /* Assets.xcassets in Resources */,
 				4283EE74296C6E1D00B53654 /* Podfile in Resources */,
+				42FD7C652971303700DC507C /* NotoSansKR-Bold.otf in Resources */,
+				42FD7C672971303700DC507C /* OFL.txt in Resources */,
 				4283EE6D296C53B400B53654 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,15 +373,19 @@
 				423E6C8A2970595400236FE4 /* KakaoLoginManager.swift in Sources */,
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
+				42FD7C6E297147D700DC507C /* UIStackView+Extension.swift in Sources */,
 				423E6C74296FEFC400236FE4 /* SchedularViewController.swift in Sources */,
 				423E6C88297018F800236FE4 /* Encodable+Extension.swift in Sources */,
+				42FD7C5B29712D4200DC507C /* UIColor+Extension.swift in Sources */,
 				423E6C8129700F5200236FE4 /* ScheduleViewModel.swift in Sources */,
 				423E6C7D296FF87100236FE4 /* Schedule.swift in Sources */,
+				42FD7C6C2971313500DC507C /* UIFont+Extension.swift in Sources */,
 				4283EE72296C683400B53654 /* FacebookLoginViewController.swift in Sources */,
 				4215C65F296ED2E400C55A2F /* KakaoLoginViewController.swift in Sources */,
 				63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */,
 				4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */,
 				423E6C832970101A00236FE4 /* ScheduleCell.swift in Sources */,
+				42FD7C7029716A9E00DC507C /* Date+Extension.swift in Sources */,
 				4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
