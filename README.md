@@ -133,7 +133,7 @@ PersonalScheduler
 ## 👀 실행 화면
 
 > 👩‍💻 실행 화면
-> 
+
 <img src="https://i.imgur.com/okOPFhG.gif" width="30%">
 
 &nbsp;
@@ -146,27 +146,15 @@ PersonalScheduler
 
 > 📕 이메일 / 카카오 / 페이스북 로그인 화면
 
-<img src="https://i.imgur.com/4CtfMR1.png" width="30%">
-<img src="https://i.imgur.com/rUcsWQz.png" width="30%">
-<img src="https://i.imgur.com/ThXPtIY.png" width="30%">
+| 이메일 | 카카오 | 페이스북 |
+|:-:|:-:|:-:|
+|<img src="https://i.imgur.com/4CtfMR1.png" width="100%">|<img src="https://i.imgur.com/rUcsWQz.png" width="100%">|<img src="https://i.imgur.com/ThXPtIY.png" width="100%">|
 
 &nbsp;
 
-> 로그인 완료시 
-
-<img src="https://i.imgur.com/1MuBPOf.png" width="30%">
-
-&nbsp;
-
-> 스케줄 목록 보여주는 화면
-
-<img src="https://i.imgur.com/XR0G728.png" width="30%">
-
-&nbsp;
-
-> 스케줄 작성하는 화면
-
-<img src="https://i.imgur.com/cXHvt3F.png" width="30%">
+| 로그인 완료시  | 스케줄 목록 화면 | 스케줄 작성 화면 |
+|:-:|:-:|:-:|
+|<img src="https://i.imgur.com/1MuBPOf.png" width="100%">|<img src="https://i.imgur.com/XR0G728.png" width="100%">|<img src="https://i.imgur.com/cXHvt3F.png" width="100%">|
 
 &nbsp;
 
