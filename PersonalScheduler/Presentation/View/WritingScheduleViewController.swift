@@ -63,8 +63,10 @@ class WritingScheduleViewController: UIViewController {
         view.addSubview(verticalStackView)
         view.backgroundColor = .Beige
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: nil, action: #selector(didTapSaveButton))
-       
+        let rightButton = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(didTapSaveButton))
+        rightButton.tintColor = .Red
+        navigationItem.rightBarButtonItem = rightButton
+        
         verticalStackView.addArrangedSubview(titleTextField)
         verticalStackView.addArrangedSubview(bodyTextView)
         verticalStackView.addArrangedSubview(datePicker)

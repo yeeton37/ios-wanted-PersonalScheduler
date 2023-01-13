@@ -73,6 +73,10 @@ class SchedularViewController: UIViewController {
         rightButton.tintColor = .Red
         navigationItem.rightBarButtonItem = rightButton
         
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backButton.tintColor = .Red
+        self.navigationItem.backBarButtonItem = backButton
+        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
