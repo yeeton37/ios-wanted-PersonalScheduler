@@ -25,7 +25,6 @@ class ScheduleViewModel {
                 }
                 
                 self.model = schedule
-                
                 self._model.send(schedule)
             }
         }

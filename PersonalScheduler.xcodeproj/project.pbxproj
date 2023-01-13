@@ -14,6 +14,8 @@
 		423E6C832970101A00236FE4 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C822970101A00236FE4 /* ScheduleCell.swift */; };
 		423E6C85297017EB00236FE4 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C84297017EB00236FE4 /* FirebaseManager.swift */; };
 		423E6C88297018F800236FE4 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C87297018F800236FE4 /* Encodable+Extension.swift */; };
+		423E6C8A2970595400236FE4 /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C892970595400236FE4 /* KakaoLoginManager.swift */; };
+		423E6C8C2970619C00236FE4 /* WritingScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E6C8B2970619C00236FE4 /* WritingScheduleViewController.swift */; };
 		4283EE6B296C527800B53654 /* CreateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6A296C527800B53654 /* CreateEmailViewController.swift */; };
 		4283EE6D296C53B400B53654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283EE6C296C53B400B53654 /* GoogleService-Info.plist */; };
 		4283EE6F296C5A5900B53654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283EE6E296C5A5900B53654 /* MainViewController.swift */; };
@@ -36,6 +38,8 @@
 		423E6C822970101A00236FE4 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		423E6C84297017EB00236FE4 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		423E6C87297018F800236FE4 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		423E6C892970595400236FE4 /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
+		423E6C8B2970619C00236FE4 /* WritingScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingScheduleViewController.swift; sourceTree = "<group>"; };
 		4283EE6A296C527800B53654 /* CreateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmailViewController.swift; sourceTree = "<group>"; };
 		4283EE6C296C53B400B53654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4283EE6E296C5A5900B53654 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			children = (
 				423E6C7B296FF81800236FE4 /* Model */,
 				423E6C84297017EB00236FE4 /* FirebaseManager.swift */,
+				423E6C892970595400236FE4 /* KakaoLoginManager.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				4215C65E296ED2E400C55A2F /* KakaoLoginViewController.swift */,
 				4283EE6E296C5A5900B53654 /* MainViewController.swift */,
 				423E6C73296FEFC400236FE4 /* SchedularViewController.swift */,
+				423E6C8B2970619C00236FE4 /* WritingScheduleViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,7 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423E6C8C2970619C00236FE4 /* WritingScheduleViewController.swift in Sources */,
 				423E6C85297017EB00236FE4 /* FirebaseManager.swift in Sources */,
+				423E6C8A2970595400236FE4 /* KakaoLoginManager.swift in Sources */,
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
 				423E6C74296FEFC400236FE4 /* SchedularViewController.swift in Sources */,
