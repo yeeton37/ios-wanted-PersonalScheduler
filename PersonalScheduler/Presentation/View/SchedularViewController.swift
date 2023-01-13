@@ -80,4 +80,10 @@ extension SchedularViewController: UITableViewDelegate, UITableViewDataSource {
         cell.transferData(schedule: model[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let writingVC = WritingScheduleViewController()
+        
+        self.navigationController?.pushViewController(writingVC, animated: true)
+    }
 }

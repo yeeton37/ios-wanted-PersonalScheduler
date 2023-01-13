@@ -18,21 +18,21 @@ final class FirebaseManager {
     func save(schedule: Schedule) throws {
         let scheduleDictionary = try schedule.asDictionary()
         
-        database.collection("scheduler").document(schedule.email).setData(scheduleDictionary)
+        database.collection("schedular").document(schedule.email).setData(scheduleDictionary)
     }
     
     func update(schedule: Schedule) {
         do {
             let scheduleDictionary = try schedule.asDictionary()
             
-            database.collection("schedule").document(schedule.email).setData(scheduleDictionary, merge: true)
+            database.collection("schedular").document(schedule.email).setData(scheduleDictionary, merge: true)
         } catch let error {
             print(error)
         }
     }
     
     func delete(schedule: Schedule) {
-        database.collection("schedule").document(schedule.email).delete()
+        database.collection("schedular").document(schedule.email).delete()
     }
     
     func fetchAll(completionHandler: @escaping ([Schedule]) -> Void) {

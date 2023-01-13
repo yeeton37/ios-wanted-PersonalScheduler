@@ -20,12 +20,11 @@ class ScheduleViewModel {
     func viewWillAppear() {
         FirebaseManager.shared.fetchAll { [weak self] schedules in
             if let self = self {
-                var schedule = schedules.filter {
+                let schedule = schedules.filter {
                     $0.email == self.email
                 }
                 
                 self.model = schedule
-                
                 self._model.send(schedule)
             }
         }
