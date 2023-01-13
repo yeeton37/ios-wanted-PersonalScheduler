@@ -15,6 +15,17 @@ class KakaoLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setup()
+        kakaoLogin()
+    }
+    
+    func setup() {
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backButton.tintColor = .Red
+        self.navigationItem.backBarButtonItem = backButton
+    }
+    
+    func kakaoLogin() {
         kakaoLoginManager.loginWithKakaoAccount { oauthToken in
             _ = oauthToken
             

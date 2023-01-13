@@ -132,6 +132,10 @@ class CreateEmailViewController: UIViewController {
         
         logoVerticalStackView.addArrangedSubview(imageView)
         logoVerticalStackView.addArrangedSubview(introduceLabel)
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backButton.tintColor = .Red
+        self.navigationItem.backBarButtonItem = backButton
     }
     
     func setAutolayout() {

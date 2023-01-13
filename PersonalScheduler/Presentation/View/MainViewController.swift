@@ -64,12 +64,13 @@ class MainViewController: UIViewController {
     }
     
     func setup() {
-        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        backButton.tintColor = .Red
-        self.navigationItem.backBarButtonItem = backButton
         view.backgroundColor = .Beige
         view.addSubview(topVerticalStackView)
         view.addSubview(greetingLabel)
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backButton.tintColor = .Red
+        self.navigationItem.backBarButtonItem = backButton
         
         topVerticalStackView.addArrangedSubview(logoutButton)
         topVerticalStackView.addArrangedSubview(nextButton)
@@ -78,8 +79,8 @@ class MainViewController: UIViewController {
     func setAutolayout() {
         NSLayoutConstraint.activate([
             greetingLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 280),
-            greetingLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            greetingLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            greetingLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            greetingLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             greetingLabel.heightAnchor.constraint(equalToConstant: 100),
             
             topVerticalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

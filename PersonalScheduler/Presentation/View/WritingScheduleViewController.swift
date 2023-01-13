@@ -24,6 +24,7 @@ class WritingScheduleViewController: UIViewController {
        let textField = UITextField()
         textField.text = "  제목을 입력하세요."
         textField.font = UIFont(name: "NotoSansKannada-Light", size: 15)
+        textField.text
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.Red_60.cgColor
         textField.layer.cornerRadius = 7
@@ -73,7 +74,7 @@ class WritingScheduleViewController: UIViewController {
             verticalStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 70),
             verticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             verticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            verticalStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -200)
+            verticalStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150)
         ])
     }
     
