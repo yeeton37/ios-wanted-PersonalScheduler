@@ -31,18 +31,11 @@ class SchedularViewController: UIViewController {
         super.viewDidLoad()
 
         bind()
-        self.view.addSubview(tableView)
-        view.backgroundColor = .black
+        setup()
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ScheduleCell.self, forCellReuseIdentifier: "ScheduleCell")
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
-        ])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +52,26 @@ class SchedularViewController: UIViewController {
                 self.tableView.reloadData()
             }
             .store(in: &cancelable)
+    }
+    
+    @objc func didTapAddButton() {
+        let writingVC = WritingScheduleViewController()
+        
+        navigationController?.visibleViewController?.present(writingVC, animated: true)
+    }
+    
+    func setup() {
+        self.view.addSubview(tableView)
+        view.backgroundColor = .black
+        let rightButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: #selector(didTapAddButton))
+        navigationItem.rightBarButtonItem = rightButton
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
 }
 
@@ -84,6 +97,6 @@ extension SchedularViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let writingVC = WritingScheduleViewController()
         
-        self.navigationController?.pushViewController(writingVC, animated: true)
+        navigationController?.visibleViewController?.present(writingVC, animated: true)
     }
 }
