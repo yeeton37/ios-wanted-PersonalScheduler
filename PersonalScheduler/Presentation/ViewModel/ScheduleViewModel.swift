@@ -7,8 +7,26 @@
 
 import UIKit
 import Combine
+protocol ScheduleViewModelInput {
+    func viewWillAppear()
+    func deleteButtonDidTap(indexPath: IndexPath)
+}
 
-class ScheduleViewModel {
+protocol ScheduleViewModelOutput {
+    var model: [Schedule] { get }
+    var _model: PassthroughSubject<[Schedule], Never> { get }
+}
+
+protocol ScheduleViewModelInterface {
+    var input: ScheduleViewModelInput { get }
+    var output: ScheduleViewModelOutput { get }
+}
+
+
+class ScheduleViewModel: ScheduleViewModelInterface, ScheduleViewModelInput, ScheduleViewModelOutput {
+    var input: ScheduleViewModelInput { self }
+    var output: ScheduleViewModelOutput { self }
+    
     var model: [Schedule] = []
     var _model = PassthroughSubject<[Schedule], Never>()
     var email: String

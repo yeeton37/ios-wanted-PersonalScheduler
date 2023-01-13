@@ -18,7 +18,9 @@ class FacebookLoginViewController: UIViewController {
         
         if let token = AccessToken.current,
            !token.isExpired {
-            // User is logged in, do work such as go to next view controller.
+            
+            let vc = MainViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

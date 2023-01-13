@@ -32,20 +32,17 @@ class SchedularViewController: UIViewController {
 
         bind()
         setup()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(ScheduleCell.self, forCellReuseIdentifier: "ScheduleCell")
+        setupAutolayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModel.viewWillAppear()
+        viewModel.input.viewWillAppear()
     }
     
     func bind() {
-        viewModel._model
+        viewModel.output._model
             .sink { [weak self] schedules in
                 guard let self = self else { return }
                 
@@ -62,12 +59,17 @@ class SchedularViewController: UIViewController {
     
     func setup() {
         self.view.addSubview(tableView)
+        
         tableView.backgroundColor = .Beige
         view.backgroundColor = .Beige
         tableView.separatorStyle = .singleLine
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 30)
         tableView.separatorInsetReference = .fromAutomaticInsets
         tableView.separatorColor = .Red_60
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ScheduleCell.self, forCellReuseIdentifier: "ScheduleCell")
         
         let rightButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: #selector(didTapAddButton))
         rightButton.tintColor = .Red
@@ -76,7 +78,9 @@ class SchedularViewController: UIViewController {
         let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backButton.tintColor = .Red
         self.navigationItem.backBarButtonItem = backButton
-        
+    }
+    
+    func setupAutolayout() {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
