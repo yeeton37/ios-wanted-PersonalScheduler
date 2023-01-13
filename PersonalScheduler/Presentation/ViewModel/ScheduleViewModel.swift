@@ -5,11 +5,11 @@
 //  Created by 이예은 on 2023/01/12.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 class ScheduleViewModel {
-    var model: [Schedule]?
+    var model: [Schedule] = []
     var _model = PassthroughSubject<[Schedule], Never>()
     var email: String
     
@@ -27,6 +27,13 @@ class ScheduleViewModel {
                 self.model = schedule
                 self._model.send(schedule)
             }
+        }
+    }
+    
+    func deleteButtonDidTap(indexPath: IndexPath) {
+        FirebaseManager.shared.delete(schedule: model[indexPath.row]) {
+            self.model.remove(at: indexPath.row)
+            self._model.send(self.model)
         }
     }
 }
