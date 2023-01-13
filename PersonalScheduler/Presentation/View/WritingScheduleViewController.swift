@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class WritingScheduleViewController: UIViewController {
     private let verticalStackView: UIStackView = {
@@ -52,7 +53,9 @@ class WritingScheduleViewController: UIViewController {
     func setup() {
         view.addSubview(verticalStackView)
         view.backgroundColor = .black
-        self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: nil, action: #selector(didTapSaveButton))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: nil, action: #selector(didTapSaveButton))
+       
         verticalStackView.addArrangedSubview(titleTextField)
         verticalStackView.addArrangedSubview(bodyTextField)
         verticalStackView.addArrangedSubview(dateTextField)
@@ -66,7 +69,20 @@ class WritingScheduleViewController: UIViewController {
     }
     
     @objc func didTapSaveButton() {
+        guard let user = Auth.auth().currentUser,
+                let userEmail = user.email,
+                let title = titleTextField.text,
+                let body = bodyTextField.text,
+                let startDate = dateTextField.text else {
+            return
+        }
         
-        FirebaseManager.shared.save(schedule: <#T##Schedule#>)
+        let schedule = Schedule(email: userEmail, title: title, body: body, startDate: startDate, endDate: nil)
+        
+        do {
+            try FirebaseManager.shared.save(schedule: schedule)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
