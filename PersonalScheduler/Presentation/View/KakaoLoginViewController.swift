@@ -18,10 +18,12 @@ class KakaoLoginViewController: UIViewController {
         kakaoLoginManager.loginWithKakaoAccount { oauthToken in
             _ = oauthToken
             
-            self.kakaoLoginManager.getUserInfo()
-            let vc = MainViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.kakaoLoginManager.getUserInfo { result in
+                if let result = result {
+                    let vc = MainViewController()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
         }
-        
     }
 }
