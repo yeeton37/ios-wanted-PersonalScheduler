@@ -11,10 +11,8 @@ import KakaoSDKUser
 import KakaoSDKAuth
 
 class KakaoLoginManager {
-    // 원래 있는 계정인지 -> 있으면 로그인 해줌
-    // 없는 계정인지 -> 오류 발생 알랏 띄우기
-    func loginWithKakaoAccount( completion: @escaping (OAuthToken?) -> Void) {
-        UserApi.shared.loginWithKakaoAccount { oauthToken, error in
+    func loginWithKakaoAccount(completion: @escaping (OAuthToken?) -> Void) {
+        UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion(nil)
@@ -25,7 +23,7 @@ class KakaoLoginManager {
         }
     }
     
-    func getUserInfo() {
+    func getUserInfo(completion: @escaping (AuthDataResult?) -> Void) {
         UserApi.shared.me() {(user, error) in
             if let error = error {
                 print(error)
@@ -38,6 +36,7 @@ class KakaoLoginManager {
                     Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))", completion: nil)
                 } else {
                     print("파이어베이스 사용자 생성")
+                    completion(result)
                 }
             }
         }
