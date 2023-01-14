@@ -11,13 +11,13 @@ import KakaoSDKUser
 import KakaoSDKAuth
 
 class KakaoLoginManager {
-    func loginWithKakaoAccount(completion: @escaping (OAuthToken?) -> Void) {
+    func kakaoLoginInWeb(completion: @escaping (OAuthToken?) -> Void) {
         UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
             if let error = error {
-                print(error.localizedDescription)
+                print("카카오 로그인 실패!!📘")
                 completion(nil)
             } else {
-                print("loginWithKakaoAccount() success.")
+                print("성공!!📕")
                 completion(oauthToken)
             }
         }
@@ -29,16 +29,24 @@ class KakaoLoginManager {
                 print(error)
             }
             
-            Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))") { result, error in
-                if let error = error {
-                    print("파이어베이스 사용자 생성 실패 \(error.localizedDescription)")
-                    
-                    Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))", completion: nil)
-                } else {
-                    print("파이어베이스 사용자 생성")
-                    completion(result)
+            Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!,
+                               password: "\(String(describing: user?.id))") { result, error in
+                if error != nil {
+                    Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!,
+                                           password: "\(String(describing: user?.id))") { result, error in
+                        if error != nil {
+                            completion(result)
+                            return
+                        }
+                    }
+                    return
                 }
+                
+                print("로그인 성공 📘")
+                completion(result)
             }
+            
+            
         }
     }
 }

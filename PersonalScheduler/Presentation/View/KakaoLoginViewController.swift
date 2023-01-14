@@ -26,7 +26,7 @@ class KakaoLoginViewController: UIViewController {
     }
     
     func kakaoLogin() {
-        kakaoLoginManager.loginWithKakaoAccount { oauthToken in
+        kakaoLoginManager.kakaoLoginInWeb { oauthToken in
             _ = oauthToken
             
             self.kakaoLoginManager.getUserInfo { result in
