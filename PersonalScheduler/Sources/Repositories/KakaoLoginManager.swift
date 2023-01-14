@@ -34,15 +34,20 @@ class KakaoLoginManager {
                 if error != nil {
                     Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!,
                                            password: "\(String(describing: user?.id))") { result, error in
+                        // result?.user.uid
                         if error != nil {
-                            completion(result)
+                            print("로그인 실패 📘 \(error?.localizedDescription)")
+                            completion(nil)
                             return
                         }
+                        
+                        print("계정 생성 🌈")
+                        completion(result)
                     }
                     return
                 }
                 
-                print("로그인 성공 📘")
+                print("로그인 성공 🐣")
                 completion(result)
             }
             

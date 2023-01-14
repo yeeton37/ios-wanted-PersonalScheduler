@@ -99,6 +99,10 @@ class CreateEmailViewController: UIViewController {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
+        UserDefaults.standard.string(forKey: "id")
+        
+        
+        
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let self = self else { return }
             
